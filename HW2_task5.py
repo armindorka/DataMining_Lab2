@@ -9,7 +9,3 @@
 # Print all the 8 values.
 
 
-'''Food for thought and further scope of learning (optional, but recommended)
-- Which algorithms work (and not work) for the different datasets? Why?
-- Try implementing DBSCAN clustering algorithm and compare the performances
-- Try the same exercises by taking a higher dimensional data, performing dimensionality reduction, running clustering algorithms, and comparing performances'''
