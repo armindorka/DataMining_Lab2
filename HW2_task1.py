@@ -1,14 +1,20 @@
+## Task 1: Generate the dataset
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs, make_moons
+from sklearn.decomposition import PCA
+from collections import defaultdict
+from scipy.spatial.distance import pdist, squareform
+from scipy.stats import mode
 
 def generate_datasets():
     """Generates two datasets: one spherical and one non-spherical."""
     # TODO: Fill the missing code
     # Hint: Use make_blobs() method imported from sklearn.datasets
     # Both datasets should have 300 samples
-    X_spherical, y_spherical = make_blobs() # There should be 3 centers, random_state=42
-    X_nonspherical, y_nonspherical = make_moons() # noise=0.05, random_state=42
+    X_spherical, y_spherical = make_blobs(n_samples=300, centers=3, random_state=42) # There should be 3 centers, random_state=42
+    X_nonspherical, y_nonspherical = make_moons(n_samples=300, noise=0.05, random_state=42) # noise=0.05, random_state=42
     return (X_spherical, y_spherical), (X_nonspherical, y_nonspherical)
 
 # Load datasets
